@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C17</title>
+</head>
+<body>
+    <div class="image">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 20%;
+        height: 33.33%;
+    }
+    .card:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("./image.jpg") no-repeat;
+        background-size: cover;
+        transform-style: preserve-3d;
+        transform-origin: 20vw 33.33vh 0;
+        animation: disappear 1s linear forwards;
+    }
+    .card:nth-child(1):before,
+    .card:nth-child(6):before,
+    .card:nth-child(9):before,
+    .card:nth-child(11):before {
+        background-position-x: 0;
+    }
+    .card:nth-child(2):before,
+    .card:nth-child(7):before,
+    .card:nth-child(12):before {
+        background-position-x: -20vw;
+    }
+    .card:nth-child(3):before,
+    .card:nth-child(8):before,
+    .card:nth-child(13):before {
+        background-position-x: -40vw;
+    }
+    .card:nth-child(4):before,
+    .card:nth-child(9):before,
+    .card:nth-child(14):before {
+        background-position-x: -60vw;
+    }
+    .card:nth-child(5):before,
+    .card:nth-child(10):before,
+    .card:nth-child(15):before {
+        background-position-x: -80vw;
+    }
+    .card:nth-child(6):before,
+    .card:nth-child(7):before,
+    .card:nth-child(8):before,
+    .card:nth-child(9):before,
+    .card:nth-child(10):before {
+        background-position-y: -33.33vh;
+    }
+    .card:nth-child(11):before,
+    .card:nth-child(12):before,
+    .card:nth-child(13):before,
+    .card:nth-child(14):before,
+    .card:nth-child(15):before {
+        background-position-y: -66.66vh;
+    }
+
+    @keyframes disappear {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(90deg);
+        }
+    }
+
+    .card:nth-child(1):before {
+        animation-delay: .5s;
+    }
+    .card:nth-child(2):before {
+        animation-delay: 1s;
+    }
+    .card:nth-child(3):before {
+        animation-delay: 1.5s;
+    }
+    .card:nth-child(4):before {
+        animation-delay: 2s;
+    }
+    .card:nth-child(5):before {
+        animation-delay: 2.5s;
+    }
+    .card:nth-child(6):before {
+        animation-delay: 3s;
+    }
+    .card:nth-child(7):before {
+        animation-delay: 3.5s;
+    }
+    .card:nth-child(8):before {
+        animation-delay: 4s;
+    }
+    .card:nth-child(9):before {
+        animation-delay: 4.5s;
+    }
+    .card:nth-child(10):before {
+        animation-delay: 5s;
+    }
+    .card:nth-child(11):before {
+        animation-delay: 5.5s;
+    }
+    .card:nth-child(12):before {
+        animation-delay: 6s;
+    }
+    .card:nth-child(13):before {
+        animation-delay: 6.5s;
+    }
+    .card:nth-child(14):before {
+        animation-delay: 7s;
+    }
+    .card:nth-child(15):before {
+        animation-delay: 7.5s;
+    }
+</style>

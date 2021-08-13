@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B2: CSS Grid</title>
+</head>
+<body>
+    <div class="header">
+        <div class="title margin" >Site Title</div>
+        <ul class="navbar">
+            <li class="margin"><a href="#">Nav 1</a></li>
+            <li class="margin"><a href="#">Nav 2</a></li>
+            <li class="margin"><a href="#">Nav 3</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="right-side margin">
+            <div class="post-title margin">
+                Post Title
+            </div>
+            <div class="post">
+                <div class="post-meta margin">
+                    Post Meta
+                </div>
+                <div class="content">
+                    <div class="text">
+                        Main Content
+                    </div>
+                    <div class="content-image">
+                        Main Content Image
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-side margin">
+            <div class="sidebar margin">
+                Side Bar
+            </div>
+            <div class="sidebar ads margin">
+                Ads
+            </div>
+            <div class="sidebar other-stuffs margin">
+                Other Stuffs
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="text margin">
+            @2018 footer
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        font-size: 18px;
+    }
+    .header {
+        display: flex;
+        height: 50px;
+    }
+    .title {
+        background: gold;
+        width: 50%;
+    }
+    .navbar {
+        display: inline-flex;
+        list-style: none;
+        width: 50%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .navbar li {
+        width: 33.33%;
+        background: pink;
+    }
+    .navbar li a{
+        text-decoration: none;
+        color: black;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+    }
+    .right-side {
+        width: 75%;
+    }
+    .left-side {
+        width: 25%;
+    }
+    .post-title {
+        background: lightblue;
+        height: 50px;
+        width: 100%;
+    }
+    .post {
+        display: flex;
+        width: 100%
+    }
+    .post-meta {
+        width: 25%;
+        height: 505px;
+        background: palegreen;
+    }
+    .content {
+        width: 75%;
+        height: 500px;
+    }
+    .text {
+        background: lightgrey;
+        height: 200px;
+    }
+    .content-image {
+        width: 100%;
+        height: 300px;
+        background: yellow;
+        margin-top: 5px;
+    }
+    .sidebar {
+        width: 100%;
+        height: 183.33px;
+        background: orange;
+    }
+    .ads {
+        background: darkgreen;
+    }
+    .other-stuffs {
+        background: #d94ff7;
+    }
+    .footer {
+        width: 100%;
+    }
+    .footer .text {
+        height: 50px;
+        background: rosybrown;
+    }
+    .margin {
+        margin: 0px 5px 5px 0px;
+    }
+</style>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B3</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
+<style>
+    .loader {
+        width: 140px;
+        display: flex;
+        flex-wrap: wrap;
+        animation: loader 4s linear infinite;
+    }
+    .ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: black;
+        margin: 10px;
+    }
+    .ball:nth-child(1) {
+        background: #19A68C;
+        animation: ball1 1s linear alternate infinite;
+    }
+    .ball:nth-child(2) {
+        background: #F63D3A;
+        animation: ball2 1s linear alternate infinite;
+    }
+    .ball:nth-child(3) {
+        background: #FDA543;
+        animation: ball3 1s linear alternate infinite;
+    }
+    .ball:nth-child(4) {
+        background: #193B48;
+        animation: ball4 1s linear alternate infinite;
+    }
+
+    @keyframes loader {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes ball1 {
+        0% {
+            transform: translate(-10px, -10px);
+        }
+        100% {
+            transform: translate(10px, 10px);
+        }
+    }
+
+    @keyframes ball2 {
+        0% {
+            transform: translate(10px, -10px);
+        }
+        100% {
+            transform: translate(-10px, 10px);
+        }
+    }
+
+    @keyframes ball3 {
+        0% {
+            transform: translate(-10px, 10px);
+        }
+        100% {
+            transform: translate(10px, -10px);
+        }
+    }
+
+    @keyframes ball4 {
+        0% {
+            transform: translate(10px, 10px);
+        }
+        100% {
+            transform: translate(-10px, -10px);
+        }
+    }
+
+</style>

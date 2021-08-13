@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B15</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="timer">
+    <div class="seconds">
+        000
+    </div>
+    <span>:</span>
+    <div class="centiseconds">
+        00
+    </div>
+</div>
+
+<div class="controls">
+    <button class="button start">Start timer</button>
+    <button class="button stop">Stop timer</button>
+    <button class="button restart">Restart timer</button>
+</div>
+
+<script lang="javascript">
+    $(document).ready(function() {
+        let start = new Date();
+        let stop = true;
+
+        setInterval(() => {
+            if(!stop) {
+                let diff = new Date() - start;
+                diff = diff.toString()
+                let seconds = diff.substring(0, diff.length-3);
+                let centiseconds = diff.substring(diff.length-3, diff.length-1);
+
+                seconds = ('000' + seconds).slice(-3);
+                centiseconds = ('00' + centiseconds).slice(-2);
+
+                if(seconds === '999' && centiseconds === '99') {
+                    stop = true;
+                }
+
+                $('.centiseconds').html(centiseconds);
+                $('.seconds').html(seconds);
+            }
+        }, 10)
+
+        $('.button.start').click(() => {
+            start = new Date();
+            stop = false;
+        })
+
+        $('.button.stop').click(() => {
+            stop = true;
+        })
+
+        $('.button.restart').click(() => {
+            stop = true;
+            $('.centiseconds').html('00');
+            $('.seconds').html('000');
+        })
+    });
+</script>
+</body>
+</html>
+<style>
+    .timer {
+        display: flex;
+        width: 100%;
+        font-size: 118px;
+        justify-content: center;
+    }
+    .controls {
+        text-align: center;
+    }
+    .button {
+        width: 100px;
+        height: 25px;
+        border: none;
+    }
+    .button.start {
+        background: lightgreen;
+    }
+    .button.stop {
+        background: indianred;
+    }
+    .button.restart {
+        background: darkorange;
+    }
+</style>
