@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI-kit</title>
+</head>
+<body>
+    <textarea></textarea>
+    <br>
+    <button>Button</button>
+    <br>
+    <select>
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+    </select>
+    <br>
+    <input type="checkbox">
+    <br>
+    <input type="radio">
+    <br>
+    <label for="radio-button">Label for radio button</label>
+    <input type="radio" id="radio-button">
+    <br>
+    <label for="checkbox">Label for checkbox</label>
+    <input type="checkbox" id="checkbox">
+    <br>
+    <input type="date">
+    <br>
+    <input type="range">
+    <br>
+    <progress max="100" value="70"></progress>
+</body>
+</html>
+<style>
+    button,
+    select,
+    textarea,
+    input {
+        font-family: Cambria;
+    }
+    textarea {
+        border-style: dashed;
+        border-color: grey;
+    }
+    button,
+    select,
+    input {
+        margin: 5px 0px;
+        padding: 5px 10px;
+        background-color: #3295ff;
+        color: white;
+        border: 1px solid #1f8dff;
+        border-radius: 5px;
+    }
+    progress {
+        -webkit-appearance: none;
+    }
+    ::-webkit-progress-bar {
+        background-color: lightgray;
+    }
+    ::-webkit-progress-value {
+        background-color: #3295ff;
+    }
+</style>
